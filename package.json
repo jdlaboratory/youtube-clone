@@ -1,25 +1,33 @@
 {
-  "name": "wetube",
+  "type": "module",
+  "name": "youtube-clone",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js --delay 2",
+    "morgan": "nodemon --exec babel-node src/morgan.js --delay 2",
+    "day3": "nodemon --exec babel-node src/day3.js --delay 2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdlaboratory/youtube-clone.git"
   },
-  "scripts": {
-    "win": "node index.js"
-  },
   "author": "JD",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/jdlaboratory/youtube-clone/issues"
   },
   "homepage": "https://github.com/jdlaboratory/youtube-clone#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6"
+    "@babel/preset-env": "^7.15.6",
+    "babel-node": "^0.0.1-security",
+    "nodemon": "^2.0.12"
   }
 }

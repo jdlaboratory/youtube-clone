@@ -1,3 +1,5 @@
+import "./db.js";
+import "./models/Video.js";
 // Modules
 import express from "express";
 import morgan from "morgan";
@@ -25,6 +27,6 @@ app.use("/videos", videoRouter);
 app.use("/users", userRouter);
 
 // Run a server
-const handleListening = () => console.log(`MORGAN::Server listening on port http://localhost:${PORT}`);
+const handleListening = () => console.log(`✅ MORGAN::Server listening on port http://localhost:${PORT}`);
 app.listen(4000, handleListening); // request
 

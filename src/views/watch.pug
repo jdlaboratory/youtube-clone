@@ -1,9 +1,12 @@
 extends base.pug
 
 block content
-    ul
-        li Rating #{video.rating}/5
-        li #{video.comment} comments.
-        li #{video.views} #{video.views <= 1 ? "view" : "views"}
-        li Posted #{video.createdAt}.
+    div
+        p=video.description
+        div
+            each hashtags in video.hashtags
+                span #{hashtags} 
+        small=video.createdAt
     a(href=`${video.id}/edit`) Edit Video &rarr;
+    br
+    a(href=`${video.id}/delete`) Delete Video &rarr;

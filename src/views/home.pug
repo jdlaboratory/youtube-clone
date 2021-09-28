@@ -2,10 +2,8 @@ extends base.pug
 include mixins/video
 
 block content
-    h2 Welcome Wetube 
-    h4 Trending Videos
-        each video in videos
-            +video(video)
-        else
-            div
-                p No videos.
+    each video in videos
+        +video(video)
+    else
+        div
+            p No videos.

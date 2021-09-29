@@ -71,8 +71,8 @@ export const deleteVideo = async (req, res) => {
 }
 export const search = async (req, res) => {
     const {keyword} = req.query;
-    let videos = [];
-    if (keyword) {
+    let videos = []; // if안에 넣으면 임시 변수이므로...
+    if (keyword) { 
         videos = await Video.find({
             title: {
                 $regex: new RegExp(keyword, "i"),
